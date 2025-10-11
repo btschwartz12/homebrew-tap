@@ -3,39 +3,39 @@ cask "testcli" do
   name "testcli"
   desc ""
   homepage ""
-  version "0.0.8"
+  version "0.0.9"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "testy"
-  bash_completion "completions/testy.bash"
-  zsh_completion "completions/_testy"
+  bash_completion "completions/testcli.bash"
+  zsh_completion "completions/_testcli"
 
   on_macos do
     on_intel do
-      url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testy_#{version}_darwin_amd64.tar.gz",
+      url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testcli_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "1401e24ab704f2f760dfcfd4ced11d7be5383b05422ab774320c38d891152df7"
+      sha256 "efefb9dd7df4f0abd02daf8412fda0e07c62bb484f2c530eb7eac43c990d4e3a"
     end
     on_arm do
-      url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testy_#{version}_darwin_arm64.tar.gz",
+      url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testcli_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "eee2da2a0bb5c0b1d5da899d9ada94ff1c38f36c905d46618d40bb8bc6138410"
+      sha256 "94f0e6828e024bd75a5a85ef0093d5fb02ebc80282d5d7dc5445c315ac5536a2"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testy_#{version}_linux_amd64.tar.gz",
+      url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testcli_#{version}_linux_amd64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "4d5d1f11c7e063954c2791d7e5cbf97783e589711c641d04e9c6509cfc6c5447"
+      sha256 "7c097df83dec7f2112522622f5825b34557b22f7596bed1684bab79980137ce3"
     end
     on_arm do
-      url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testy_#{version}_linux_arm64.tar.gz",
+      url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testcli_#{version}_linux_arm64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "e6444ed08792b81d73d8a7a0104b3b77705a5002d7b002f051760fe6b0aa87fa"
+      sha256 "435e274dc50019951e8aaf86bfc82ba3706fa038cef73ce8504aa38dd88d9aa9"
     end
   end
 
@@ -46,7 +46,7 @@ cask "testcli" do
   end
 
   caveats do
-    "NOTE: the install executable is "testy", not "testcli". For more info, visit https://github.com/btschwartz12/testcli"
+    "NOTE: the install executable is 'testy', not 'testcli'. For more info, visit https://github.com/btschwartz12/testcli"
   end
 
   # No zap stanza required
