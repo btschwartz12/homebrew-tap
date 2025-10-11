@@ -3,7 +3,7 @@ cask "testcli" do
   name "testcli"
   desc ""
   homepage ""
-  version "0.0.7"
+  version "0.0.8"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,12 +17,12 @@ cask "testcli" do
     on_intel do
       url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testy_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "2dd5615b6f6221bfe7be5dc9e9a5e03ab617b35f0d82992c0a1c9ae8f72bf377"
+      sha256 "1401e24ab704f2f760dfcfd4ced11d7be5383b05422ab774320c38d891152df7"
     end
     on_arm do
       url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testy_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "f3a883747c30cd111462626f0cd4f1e1a675d91cc25398746f669eb879c2362c"
+      sha256 "eee2da2a0bb5c0b1d5da899d9ada94ff1c38f36c905d46618d40bb8bc6138410"
     end
   end
 
@@ -30,19 +30,23 @@ cask "testcli" do
     on_intel do
       url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testy_#{version}_linux_amd64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "99dc9ef78cff6b5edbe8188a07095a623512ba97a4f3d39ce52ff8a6b1cd395a"
+      sha256 "4d5d1f11c7e063954c2791d7e5cbf97783e589711c641d04e9c6509cfc6c5447"
     end
     on_arm do
       url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testy_#{version}_linux_arm64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "c99c0945c43f6d8ef18223a81e4dcc6679ab6dc47879c828472f327a00faecab"
+      sha256 "e6444ed08792b81d73d8a7a0104b3b77705a5002d7b002f051760fe6b0aa87fa"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/testy"]
     end
   end
 
   caveats do
-    "The binary for this cask has been renamed to `testy` from `testcli`."
-    ""
-    "See the README for more information: https://github.com/btschwartz12/testcli"
+    "NOTE: the install executable is "testy", not "testcli". For more info, visit https://github.com/btschwartz12/testcli"
   end
 
   # No zap stanza required
