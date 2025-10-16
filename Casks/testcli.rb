@@ -3,7 +3,7 @@ cask "testcli" do
   name "testcli"
   desc "Test CLI"
   homepage "https://github.com/btschwartz12/testcli"
-  version "0.0.11"
+  version "0.0.12"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,12 +17,12 @@ cask "testcli" do
     on_intel do
       url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testcli_#{version}_darwin_amd64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "d7d41ebaab950eca18c273328b84c6b9142dd35091676e2102a7a513b1496fea"
+      sha256 "7d61423d3286cdeffb51d0a3aca609af7f125ad919da65763ef764c2d5cd70eb"
     end
     on_arm do
       url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testcli_#{version}_darwin_arm64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "18fad01f5c7b912d135586f500aebacaff1eb5e7392cd9f11fcd14d43fbb10c7"
+      sha256 "82cfed7cbd2a9fda81c7cef2e07595d71e68fa1cf36cd83ccff932137028a1b3"
     end
   end
 
@@ -30,12 +30,12 @@ cask "testcli" do
     on_intel do
       url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testcli_#{version}_linux_amd64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "0c97b2b180db382d384623a6dd1d68702398ee44e96c4a3b41d9741ba5d5a553"
+      sha256 "500ae48e27442abad182079eb3d7f9e2e57d2ba71488b2f822128d36f3f4eca6"
     end
     on_arm do
       url "https://github.com/btschwartz12/testcli/releases/download/v#{version}/testcli_#{version}_linux_arm64.tar.gz",
         verified: "github.com/btschwartz12/testcli/"
-      sha256 "2587037c8c0dad4e19b6320c46f7cbb1b0306513cc62aa52170febb734eafeb0"
+      sha256 "795d3e2e6cc696ce7cba52f4de7d3ce00b872dc06e10341faf3cbf92459be895"
     end
   end
 
